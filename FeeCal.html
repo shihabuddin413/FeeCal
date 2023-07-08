@@ -1,0 +1,39 @@
+<html>
+    <head>
+      <title>fee cal</title>
+      <style>
+        body{
+          padding-left:15%;
+          padding-top:50%
+        }
+        
+        input, #res{
+          font-size: 20px!important;
+          margin-bottom: 15px;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Fee Calculator</h1>
+      <div>
+        <input style="padding : 10px; " id="tl" type="text" placeholder="Amount">
+        <button style="padding : 10px; " id="show">Show</button>
+        <div>
+          <p>
+            <h4 id="res"></h4>
+          </p>
+        </div>
+      </div>
+      <script>
+        var tl = document.getElementById('tl')
+        var show = document.getElementById('show')
+        var res = document.getElementById('res')
+        
+        show.addEventListener('click', ()=>{
+          var cal=0.0004*Number(tl.value)*2;
+          console.log(cal)
+          res.innerHTML = '$ ' + cal.toFixed(2);
+        })
+      </script>
+    </body>
+</html>
